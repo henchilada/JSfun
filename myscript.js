@@ -10,6 +10,7 @@
 // 	console.log("You clicked " + this.name);
 // };
 //now I'm going to make the ghost text hide in my form
+"use strict";
 var fNameField = document.getElementById("fnamefield");
 
 fNameField.onblur = function () {
@@ -23,9 +24,9 @@ fNameField.onfocus = function () {
 		fNameField.value ="";
 	}
 };
-function simpleMessage() {
-	alert("This a simple alert box");
-}
+// function simpleMessage() {
+// 	alert("This a simple alert box");
+// }
 //working on the image rotation now
 var myImage = document.getElementById("mainImage");
 var imageArray = ["images/baseball.jpeg", "images/canadaball.jpeg", "images/USAball.jpeg", "images/beachball.jpeg", "images/9ball.jpeg"];
@@ -51,11 +52,11 @@ function stopSlide(){
 myImage.onmouseover = function () {
 	stopSlide();
 	console.log("The slideshow is paused");
-}
+};
 myImage.onmouseout = function () {
 	startSlide();
 	console.log("The slideshow resumes");
-}
+};
 //call the startSlide function when loading the page to start the slideshow 
 startSlide();
 
