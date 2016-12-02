@@ -42,7 +42,7 @@ function changeImage () {
 //set up functions for starting and stopping the slider
 var myInterval;
 function startSlide(){
-	myInterval = setInterval(changeImage, 3000);
+	myInterval = setInterval(changeImage, 2500);
 }
 function stopSlide(){
 	clearInterval(myInterval);
@@ -50,9 +50,11 @@ function stopSlide(){
 //set up mouseover and mouseout functions calling the start/stop slider functions
 myImage.onmouseover = function () {
 	stopSlide();
+	console.log("The slideshow is paused");
 }
 myImage.onmouseout = function () {
 	startSlide();
+	console.log("The slideshow resumes");
 }
 //call the startSlide function when loading the page to start the slideshow 
 startSlide();
