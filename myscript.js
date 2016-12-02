@@ -60,5 +60,31 @@ myImage.onmouseout = function () {
 //call the startSlide function when loading the page to start the slideshow 
 startSlide();
 
+// //creating an AJAX request
+// var myRequest
+// // check if the feature is there
+// if(window.XMLHttpRequest) {
+// 	myRequest = new XMLHttpRequest();
+// } else if(window.ActiveXObject) {
+// 	myRequest = new ActiveXObject("Microsoft.XMLHTTP");
+// }
+// //create an event handler
+// myRequest.onreadystatechange = function(){
+// 	console.log("The HTTP request worked!");
+// 	console.log(myRequest.readyState);
+// };
+// //open and send it
+// myRequest.open('GET','https://www.happyballs.com/collections/standard-antenna-balls', true);
+// // pass any parameters
+
+//jquery HTTP request
+// function confirmy()
+// 	console.log("You retrieved the page data!");
+// }
+// var newRequest = jQuery.get('URL', confirmy);
+
+
+
+
 
 
