@@ -83,8 +83,16 @@ startSlide();
 // }
 // var newRequest = jQuery.get('URL', confirmy);
 
-
-
+var invocation = new XMLHttpRequest();
+var url = 'http://www.happyballs.com/collections/standard-antenna-balls';
+   
+function callOtherDomain() {
+  if(invocation) {    
+    invocation.open('GET', url, true);
+    invocation.onreadystatechange = handler;
+    invocation.send(); 
+  }
+}
 
 
 
