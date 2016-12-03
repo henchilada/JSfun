@@ -60,39 +60,26 @@ myImage.onmouseout = function () {
 //call the startSlide function when loading the page to start the slideshow 
 startSlide();
 
-// //creating an AJAX request
-// var myRequest
-// // check if the feature is there
-// if(window.XMLHttpRequest) {
-// 	myRequest = new XMLHttpRequest();
-// } else if(window.ActiveXObject) {
-// 	myRequest = new ActiveXObject("Microsoft.XMLHTTP");
-// }
-// //create an event handler
-// myRequest.onreadystatechange = function(){
-// 	console.log("The HTTP request worked!");
-// 	console.log(myRequest.readyState);
-// };
-// //open and send it
-// myRequest.open('GET','https://www.happyballs.com/collections/standard-antenna-balls', true);
-// // pass any parameters
+//tried to get data from happyballs, but ran into the same-origin issue. Time to try JSONP next
 
-//jquery HTTP request
-// function confirmy()
-// 	console.log("You retrieved the page data!");
-// }
-// var newRequest = jQuery.get('URL', confirmy);
+//trying request with JSONP
+var request;
+// check if the feature is there
 
-var invocation = new XMLHttpRequest();
+if(window.XMLHttpRequest) {
+	request = new XMLHttpRequest();
+} else if(window.ActiveXObject) {
+	request = new ActiveXObject("Microsoft.XMLHTTP");
+};
 var url = 'http://www.happyballs.com/collections/standard-antenna-balls';
-   
-function callOtherDomain() {
-  if(invocation) {    
-    invocation.open('GET', url, true);
-    invocation.onreadystatechange = handler;
-    invocation.send(); 
-  }
+
+request.open('GET', url, true);
+request.onreadystatechange = function() {
+	if ((request.status === 200) && 
+		(request.readyState === 4));
 }
+
+
 
 
 
